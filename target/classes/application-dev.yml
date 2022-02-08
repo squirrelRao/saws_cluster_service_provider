@@ -8,7 +8,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
 eureka:
   client:
     #是否将自己注册到Eureka Server,默认为true
