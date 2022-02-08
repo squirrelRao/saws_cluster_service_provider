@@ -3,6 +3,12 @@ spring:
     name: saws-eureka-service
 server:
   port: 8081
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 eureka:
   client:
     #是否将自己注册到Eureka Server,默认为true
