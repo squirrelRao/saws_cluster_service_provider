@@ -1,8 +1,15 @@
 spring:
   application:
     name: saws-eureka-service
+  config:
+    import: "optional:configserver:"
+    uri: http://localhost:6900
+    name: saws-server-config-dev
+    profile: dev
+    label: master
+
 server:
-  port: 8081
+  port: 5051
 # 度量指标监控与健康检查
 management:
   endpoints:

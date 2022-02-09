@@ -4,4 +4,4 @@
 * 服务注册：Erueka-client
 * 熔断和降级: Hystrix
 * 服务网关: Zuul
-
+* 远程配置: SpringCloud Config Client (读取)
