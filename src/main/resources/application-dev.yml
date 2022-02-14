@@ -1,8 +1,13 @@
 spring:
   application:
     name: saws-eureka-service
-
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm: true
+    publisher-returns: true
 server:
   port: 5051
 # 度量指标监控与健康检查

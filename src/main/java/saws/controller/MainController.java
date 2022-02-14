@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+import saws.massage.MessageSender;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +17,9 @@ import java.util.Map;
 @Slf4j
 @RestController
 public class MainController {
+
+    @Autowired
+    private MessageSender messageSender;
 
     @Value("${name}")
     private String name;
@@ -44,6 +48,7 @@ public class MainController {
         res.put("name",this.name);
         res.put("domain",this.domain);
 
+        messageSender.sendDirectMessage("name:"+name +" | domain:"+domain);
         return res;
 
     }
