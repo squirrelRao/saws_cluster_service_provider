@@ -1,12 +1,7 @@
 spring:
   application:
     name: saws-eureka-service
-  config:
-    import: "optional:configserver:"
-    uri: http://localhost:6900
-    name: saws-server-config-dev
-    profile: dev
-    label: master
+
 
 server:
   port: 5051

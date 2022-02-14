@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 //@EnableZuulProxy
 public class SawsEurekaClientApplication {
 

@@ -17,10 +17,10 @@ import java.util.Map;
 @RestController
 public class MainController {
 
-//    @Value("${name}")
+    @Value("${name}")
     private String name;
 
-//    @Value("${domain}")
+    @Value("${domain}")
     private String domain;
 
     @GetMapping(value = "/hello")

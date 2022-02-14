@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: "saws-server-config-dev"
+      profile: "dev"
+      label: "master"
+  config:
+    import: "optional:configserver:http://localhost:6900"
