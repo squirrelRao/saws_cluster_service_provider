@@ -37,7 +37,7 @@ public class MessageSender {
             log.info("test");
             return;
         }
-        rabbitTemplate.convertAndSend(rabbitConfig.exchange,rabbitConfig.queue, map);
+        rabbitTemplate.convertAndSend(rabbitConfig.queue, map);
         log.info("发送消息成功: "+map);
     }
 }
